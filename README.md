@@ -23,7 +23,7 @@
 <br>
 <br>
 
-## 4 - creare il layout di base per l'applicazione ed impostare le rotte per le diverse pagine.
+## 4 - creare il layout di base per l'applicazione ed impostare le rotte per le diverse pagine. ✔️
    - 4.1 - creare struttura router - ✅
    - 4.2 - creare layout base - ✅
    - 4.2 - creare componenti - ✅
@@ -34,19 +34,22 @@
 <br>
 <br>
 
-## 5 - creare 2 pagine
+## 5 - creare 2 pagine ✔️
    ### 5.1 - homepage, in cui mostrare la lista dei film - ✅
    ### 5.2 - pagina di dettaglio di un singolo film - ✅
 
 <br>
 <br>
 
-## 6 - configurare l’app di backend (repo webapp-express) a ricevere chiamate dall'app React, installando e impostando il middleware CORS
+## 6 - configurare l’app di backend (repo webapp-express) a ricevere chiamate dall'app React, installando e impostando il middleware CORS - ✔️
+
+   - 6.1 - npm install `cors` - ✅
+   - 6.2 - aggiungere la cors middleware - ✅
 
 <br>
 <br>
 
-## 7 - effettuare una chiamata Ajax dalla home del progetto React, per ottenere la lista dei film
+## 7 - effettuare una chiamata Ajax dalla home del progetto React, per ottenere la lista dei film - ✔️
 
 <br>
 <br>

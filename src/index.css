@@ -1,2 +1,14 @@
 @import url(bootstrap);
 @import url(bootstrap-icons);
+
+.card {
+    border-color: orange;
+}
+
+.img {
+    max-width: 100%;
+}
+
+.card-body {
+    height: 250px;
+}
