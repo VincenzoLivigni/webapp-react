@@ -27,9 +27,9 @@
    - 4.1 - creare struttura router - ✅
    - 4.2 - creare layout base - ✅
    - 4.2 - creare componenti - ✅
-       - 4.2.1 - Header - 
-       - 4.2.1 - Navbar - 
-       - 4.2.1 - Footer - 
+       - 4.2.1 - Header - ✅
+       - 4.2.2 - Navbar - ✅
+       - 4.2.3 - Footer - 
 
 <br>
 <br>
