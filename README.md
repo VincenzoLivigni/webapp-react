@@ -35,8 +35,8 @@
 <br>
 
 ## 5 - creare 2 pagine
-   ### 5.1 - homepage, in cui mostrare la lista dei film
-   ### 5.2 - pagina di dettaglio di un singolo film
+   ### 5.1 - homepage, in cui mostrare la lista dei film - ✅
+   ### 5.2 - pagina di dettaglio di un singolo film - ✅
 
 <br>
 <br>
@@ -46,7 +46,7 @@
 <br>
 <br>
 
-## 7 - effettuare una chiamata Ajax dalla home del progetto React, per ottenere la lista dei libri
+## 7 - effettuare una chiamata Ajax dalla home del progetto React, per ottenere la lista dei film
 
 <br>
 <br>

@@ -1,5 +1,36 @@
 import { Link } from "react-router-dom";
 
+const menu = [
+    {
+        id: 1,
+        namePage: "HomePage",
+        link: "/"
+    },
+    {
+        id: 2,
+        namePage: "Movies",
+        link: "/movies"
+    }
+]
+
+const policy = [
+    {
+        id: 1,
+        namePage: "Privacy",
+        link: "/"
+    },
+    {
+        id: 2,
+        namePage: "Terms",
+        link: "/"
+    },
+    {
+        id: 3,
+        namePage: "Conditions",
+        link: "/"
+    }
+]
+
 export default function Footer() {
 
     return (
@@ -14,27 +45,26 @@ export default function Footer() {
                     <div className="col-4">
                         <h3>Menu</h3>
                         <ul className="list-unstyled">
-                            <li>
-                                <Link to="/">Home</Link>
-                            </li>
-                            <li>
-                                <Link to="/">Link</Link>
-                            </li>
+                            {
+                                menu.map((item) => (
+                                    <li key={item.id} className="nav-item">
+                                        <Link className="nav-link" aria-current="page" to={item.link}>{item.namePage}</Link>
+                                    </li>
+                                ))
+                            }
                         </ul>
                     </div>
 
                     <div className="col-4">
                         <h3>Policy</h3>
                         <ul className="list-unstyled">
-                            <li>
-                                <Link to="/">Privacy</Link>
-                            </li>
-                            <li>
-                                <Link to="/">Terms</Link>
-                            </li>
-                            <li>
-                                <Link to="/">Conditions</Link>
-                            </li>
+                            {
+                                policy.map((item) => (
+                                    <li key={item.id} className="nav-item">
+                                        <Link className="nav-link" aria-current="page" to={item.link}>{item.namePage}</Link>
+                                    </li>
+                                ))
+                            }
                         </ul>
                     </div>
                 </div>

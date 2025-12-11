@@ -1,5 +1,18 @@
 import { NavLink } from "react-router-dom";
 
+const menu = [
+    {
+        id: 1,
+        namePage: "HomePage",
+        link: "/"
+    },
+    {
+        id: 2,
+        namePage: "Movies",
+        link: "/movies"
+    }
+]
+
 export default function Navbar() {
 
     return (
@@ -19,13 +32,13 @@ export default function Navbar() {
                 </button>
                 <div className="collapse navbar-collapse" id="main-menu">
                     <ul className="navbar-nav me-auto mt-2 mt-lg-0">
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/" aria-current="page">Home
-                                <span className="visually-hidden">(current)</span></NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/">Link</NavLink>
-                        </li>
+                        {
+                            menu.map((item) => (
+                                <li key={item.id} className="nav-item">
+                                    <NavLink className="nav-link" aria-current="page" to={item.link}>{item.namePage}</NavLink>
+                                </li>
+                            ))
+                        }
                     </ul>
                 </div>
             </div>
