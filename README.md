@@ -24,6 +24,12 @@
 <br>
 
 ## 4 - creare il layout di base per l'applicazione ed impostare le rotte per le diverse pagine.
+   - 4.1 - creare struttura router - ✅
+   - 4.2 - creare layout base - ✅
+   - 4.2 - creare componenti - ✅
+       - 4.2.1 - Header - 
+       - 4.2.1 - Navbar - 
+       - 4.2.1 - Footer - 
 
 <br>
 <br>

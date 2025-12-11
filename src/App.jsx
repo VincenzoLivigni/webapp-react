@@ -1,8 +1,17 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import DefaultLayout from "../layouts/DefaultLayout"
+
 function App() {
 
   return (
     <>
-      <h1 className="bg-warning">Hello world</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<DefaultLayout />}>
+            <Route path="/" element={<h1>Hello Spank</h1>}></Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
