@@ -29,7 +29,7 @@
    - 4.2 - creare componenti - ✅
        - 4.2.1 - Header - ✅
        - 4.2.2 - Navbar - ✅
-       - 4.2.3 - Footer - 
+       - 4.2.3 - Footer - ✅
 
 <br>
 <br>
