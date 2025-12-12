@@ -19,7 +19,7 @@ export default function Navbar() {
         <nav
             className="navbar navbar-expand-md bg-warning">
             <div className="container">
-                <NavLink className="navbar-brand" to="/">Movies reviews</NavLink>
+                <NavLink className="navbar-brand" to="/">Movies app</NavLink>
                 <button
                     className="navbar-toggler d-lg-none"
                     type="button"

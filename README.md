@@ -54,7 +54,7 @@
 <br>
 <br>
 
-## 8 - effettuare una chiamata AJAX dalla pagina di dettaglio per ottenere il dettaglio di un singolo film, comprese le sue recensioni
+## 8 - effettuare una chiamata AJAX dalla pagina di dettaglio per ottenere il dettaglio di un singolo film, comprese le sue recensioni - ✔️
 
 <br>
 <br>

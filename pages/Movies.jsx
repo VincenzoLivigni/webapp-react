@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import axios from "axios"
 import { useEffect, useState } from "react"
 
@@ -33,11 +34,13 @@ export default function Movies() {
                                 <div className="card my-5">
                                     <div className="card-top p-2 bg-warning">
                                         <img className="img" src={`http://localhost:3000/images/${item.image}`} />
-                                    </div>
-                                    <div className="card-body p-2 bg-warning text-dark">
-                                        <h4>Title: {item.title}</h4>
-                                        <h5>Director: {item.director}</h5>
-                                        <p><strong>Abstract</strong>: {item.abstract}</p>
+                                        <div className="card-body p-2 bg-warning text-dark">
+                                            <h4>Title: {item.title}</h4>
+                                            <h6 className="mt-3 mb-4">Director: {item.director}</h6>
+                                            <button className="btn btn-dark">
+                                                <Link className="text-light" to={`/movies/${item.id}`}>Movie Detail</Link>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
