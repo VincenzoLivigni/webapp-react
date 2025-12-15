@@ -25,6 +25,21 @@ export default function MovieDetail() {
     }
 
 
+    function ratingStars(vote) {
+
+        let stars = []
+        for (let i = 1; i <= vote; i++) {
+            stars.push(<i className="bi bi-star-fill" key={`fill-${i}`}></i>)
+        }
+
+        for (let i = 1; i <= 5 - vote; i++) {
+            stars.push(<i className="bi bi-star" key={`${i}`}></i>)
+        }
+
+        return stars
+    }
+
+
     return (
         <main className="bg-dark">
             <div className="container pb-5">
@@ -53,14 +68,15 @@ export default function MovieDetail() {
                             <li key={review.id} className="list-group-item bg-dark text-warning">
                                 <strong className="d-block mb-1">{review.name}</strong>
                                 {review.text}
-                                {review.vote}
+                                <div>
+                                    {ratingStars(review.vote)}
+                                </div>
                             </li>
                         ))
                     }
                 </ul>
-
             </div>
         </main>
     )
-
 }
+
