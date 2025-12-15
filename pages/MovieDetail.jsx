@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom"
 import axios from "axios"
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
+import MovieFormReview from "../components/MovieFormReview"
 
 export default function MovieDetail() {
 
@@ -41,19 +41,24 @@ export default function MovieDetail() {
                         <span><strong>Relese year</strong>: {singleMovie?.release_year}</span>
                         <hr />
                         <span><strong>Abstract</strong>: {singleMovie?.abstract}</span>
-                        <hr />
-                        <h5>Reviews</h5>
-                        <ul className="list-unstyled">
-                            {
-                                singleMovie?.reviews.map((review) => (
-                                    <li key={review.id} className="mb-2">
-                                        <strong>- {review.name}:</strong> {review.text}
-                                    </li>
-                                ))
-                            }
-                        </ul>
                     </div>
                 </div>
+
+                <MovieFormReview />
+
+                <h3 className="d-block mt-5 mb-3 text-warning">Reviews</h3>
+                <ul className="list-unstyled list-group">
+                    {
+                        singleMovie?.reviews.map((review) => (
+                            <li key={review.id} className="list-group-item bg-dark text-warning">
+                                <strong className="d-block mb-1">{review.name}</strong>
+                                {review.text}
+                                {review.vote}
+                            </li>
+                        ))
+                    }
+                </ul>
+
             </div>
         </main>
     )
