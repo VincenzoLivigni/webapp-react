@@ -59,7 +59,7 @@ export default function MovieDetail() {
                     </div>
                 </div>
 
-                <MovieFormReview />
+                <MovieFormReview movieId={id} />
 
                 <h3 className="d-block mt-5 mb-3 text-warning">Reviews</h3>
                 <ul className="list-unstyled list-group">
@@ -68,7 +68,7 @@ export default function MovieDetail() {
                             <li key={review.id} className="list-group-item bg-dark text-warning">
                                 <strong className="d-block mb-1">{review.name}</strong>
                                 {review.text}
-                                <div>
+                                <div className="mt-1">
                                     {ratingStars(review.vote)}
                                 </div>
                             </li>
