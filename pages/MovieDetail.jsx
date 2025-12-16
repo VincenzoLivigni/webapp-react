@@ -2,17 +2,19 @@ import axios from "axios"
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import MovieFormReview from "../components/MovieFormReview"
+import { useLoadingContext } from "../contexts/LoadingContext"
 
 export default function MovieDetail() {
 
     const [singleMovie, setSingleMovie] = useState(null)
     const { id } = useParams()
+    const { setLoading } = useLoadingContext()
 
     const url = `http://localhost:3000/movies/${id}`
 
-    useEffect(generaMovie, [])
+    useEffect(() => {
+        setLoading(true)
 
-    function generaMovie() {
         axios
             .get(url)
             .then(res => {
@@ -22,7 +24,10 @@ export default function MovieDetail() {
             .catch(err => {
                 console.log(err);
             })
-    }
+            .finally(() => {
+                setLoading(false)
+            })
+    }, [])
 
 
     function ratingStars(vote) {

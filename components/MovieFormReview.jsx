@@ -1,5 +1,6 @@
 import { useState } from "react"
 import axios from "axios"
+import { useLoadingContext } from "../contexts/LoadingContext"
 
 export default function MovieFormReview({ movieId }) {
 
@@ -8,10 +9,12 @@ export default function MovieFormReview({ movieId }) {
         vote: "",
         text: "",
     })
+    const { setLoading } = useLoadingContext()
 
 
     function handleSubmit(e) {
         e.preventDefault()
+        setLoading(true)
 
         axios.post(`http://localhost:3000/movies/${movieId}/reviews`, formData)
             .then((res) => {
@@ -20,6 +23,12 @@ export default function MovieFormReview({ movieId }) {
                     vote: "",
                     text: "",
                 })
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+            .finally(() => {
+                setLoading(false)
             })
     }
 

@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom"
 import axios from "axios"
 import { useEffect, useState } from "react"
+import { useLoadingContext } from "../contexts/LoadingContext"
 
 export default function Movies() {
 
     const [movies, setMovies] = useState([])
-
     const url = "http://localhost:3000/movies"
+    const { setLoading } = useLoadingContext()
 
     useEffect(() => {
-
+        setLoading(true)
 
         axios.get(url)
             .then(res => {
@@ -18,6 +19,9 @@ export default function Movies() {
             })
             .catch(err => {
                 console.log(err);
+            })
+            .finally(() => {
+                setLoading(false)
             })
     }, [])
 

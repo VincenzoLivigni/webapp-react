@@ -3,21 +3,26 @@ import DefaultLayout from "../layouts/DefaultLayout"
 import HomePage from "../pages/Homepage"
 import Movies from "../pages/Movies"
 import MovieDetail from "../pages/MovieDetail"
+import { LoadingProvider } from "../contexts/LoadingContext"
+import Loader from "../components/Loader"
 
 
 function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route element={<DefaultLayout />}>
-            <Route path="/" element={<HomePage />}></Route>
-            <Route path="/movies" element={<Movies />}></Route>
-            <Route path="/movies/:id" element={<MovieDetail />}></Route>
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <LoadingProvider>
+        <Loader />
+        <BrowserRouter>
+          <Routes>
+            <Route element={<DefaultLayout />}>
+              <Route path="/" element={<HomePage />}></Route>
+              <Route path="/movies" element={<Movies />}></Route>
+              <Route path="/movies/:id" element={<MovieDetail />}></Route>
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </LoadingProvider>
     </>
   )
 }
